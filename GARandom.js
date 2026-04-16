@@ -7,9 +7,8 @@ function randTest() {
   // s is the same as the lastS,
   // if we are still on the same second
   // then the new s becomes the result of the previous s
-  let d = new Date();
   let lastS = 0;
-  let s = d.getMilliseconds();
+  let s = Date.now();
 
   if (lastS == s) {
       s = Math.sin(s) * 137.508;
