@@ -4,19 +4,9 @@ var lastS = 0;
 var s = d.getSeconds();
 
 function randTest() {
-  // s is the same as the lastS,
-  // if we are still on the same second
-  // then the new s becomes the result of the previous s
-  let lastS = 0;
   let s = Date.now();
-
-  if (lastS == s) {
-      s = Math.sin(s) * 137.508;
-  }
-
   let x = Math.sin(s) * 137.508;
-  lastS = s;
-  return x;
+  return x - Math.floor(x);
 }
 //RANDOM FUNCTION ENDS
 
