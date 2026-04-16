@@ -9,7 +9,7 @@ function randTest() {
   // then the new s becomes the result of the previous s
   let d = new Date();
   let lastS = 0;
-  let s = d.getSeconds();
+  let s = d.getMilliseconds();
 
   if (lastS == s) {
       s = Math.sin(s) * 137.508;
