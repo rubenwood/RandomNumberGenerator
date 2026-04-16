@@ -7,15 +7,16 @@ function randTest() {
   // s is the same as the lastS,
   // if we are still on the same second
   // then the new s becomes the result of the previous s
+  let d = new Date();
+  let lastS = 0;
+  let s = d.getSeconds();
+
   if (lastS == s) {
-    s = Math.sin(s) * 137.508;
+      s = Math.sin(s) * 137.508;
   }
 
-  //Randomness happens here
-  var x = Math.sin(s) * 137.508;
-
+  let x = Math.sin(s) * 137.508;
   lastS = s;
-
   return x;
 }
 //RANDOM FUNCTION ENDS
@@ -28,7 +29,7 @@ for (var i = 0; i < 10; i++) {
   //alert("RT: " + randTest());
 
   if ((output == lastOutput) || (output == randTest())) {
-    alert("SAME!!!SAME!!!SAME!!!SAME!!!SAME!!!");
+    alert("SAME!!!");
   }
 
   lastOutput = output;
